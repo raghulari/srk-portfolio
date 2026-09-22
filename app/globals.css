@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f1efec;
+  --ink: #131311;
+  --muted: #6f6d68;
+  --accent: #22c55e;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-display: var(--font-archivo);
+  --font-sans: var(--font-instrument);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-instrument), sans-serif;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Hollow / outlined display text like the reference */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: clamp(1.5px, 0.22vw, 3.5px) var(--ink);
+}
+
+/* Subtle film grain over the whole page for texture */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
