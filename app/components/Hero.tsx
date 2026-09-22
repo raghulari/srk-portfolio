@@ -158,24 +158,24 @@ export default function Hero() {
       {/* ---------- Giant name ---------- */}
       <motion.h1
         style={{ y: nameY, opacity: nameOpacity }}
-        className="z-10 mt-6 select-none px-2 text-center font-display font-bold uppercase leading-[0.82] tracking-[-0.02em] sm:mt-6"
+        className="z-10 mt-6 select-none px-3 text-center font-display font-bold uppercase leading-[0.84] tracking-[-0.03em] sm:mt-6 sm:leading-[0.82]"
       >
         <RevealName
           text="SRI RAGHUL KRISHNA"
           delay={0.35}
-          className="text-outline text-[5.6vw] font-extrabold tracking-[-0.03em] [font-stretch:105%] sm:text-[7.2vw] lg:text-[8.4vw]"
+          className="text-outline text-[7.5vw] font-extrabold tracking-[-0.03em] [font-stretch:105%] sm:text-[7.2vw] lg:text-[8.4vw]"
         />
         <RevealName
           text="ARIVALAGAN"
           delay={0.6}
-          className="text-[9.5vw] font-bold tracking-[-0.02em] [font-stretch:118%] sm:text-[10.6vw] lg:text-[11vw]"
+          className="text-[11.8vw] font-bold tracking-[-0.02em] [font-stretch:112%] sm:text-[10.6vw] lg:text-[11vw]"
         />
       </motion.h1>
 
       {/* ---------- Portrait ---------- */}
       <motion.div
         style={{ y: isMobile ? 0 : photoY }}
-        className="relative z-20 mt-4 flex justify-center px-4 sm:pointer-events-none sm:absolute sm:inset-x-0 sm:bottom-0 sm:mt-0 sm:px-0"
+        className="relative z-20 -mt-5 flex justify-center px-4 sm:pointer-events-none sm:absolute sm:inset-x-0 sm:bottom-0 sm:mt-0 sm:px-0"
       >
         <motion.div
           initial={{ y: "55%", opacity: 0 }}
@@ -190,7 +190,7 @@ export default function Hero() {
             width={2048}
             height={1528}
             priority
-            className="h-auto max-h-[46svh] w-auto max-w-[86vw] object-contain object-bottom grayscale contrast-105 drop-shadow-[0_-10px_60px_rgba(0,0,0,0.18)] sm:h-[62svh] sm:max-h-none sm:max-w-[96vw] lg:h-[70svh]"
+            className="h-auto max-h-[46svh] w-auto max-w-[88vw] object-contain object-bottom grayscale contrast-105 drop-shadow-[0_-10px_60px_rgba(0,0,0,0.18)] sm:h-[62svh] sm:max-h-none sm:max-w-[96vw] lg:h-[70svh]"
           />
         </motion.div>
       </motion.div>
